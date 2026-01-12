@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { updateProject, getProjectById, type UpdateProjectData, type Project } from '../../api/projects';
+import { updateProject, getProjectById, type UpdateProjectData } from '../../api/projects';
 import { FaUpload, FaPlus, FaTimes } from 'react-icons/fa';
 
 interface EditProjectFormProps {

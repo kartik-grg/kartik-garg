@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { updateCertification, getCertificationById, type UpdateCertificationData, type Certification } from '../../api/certifications';
+import { updateCertification, getCertificationById, type UpdateCertificationData } from '../../api/certifications';
 import { FaUpload, FaPlus, FaTimes } from 'react-icons/fa';
 
 interface EditCertificationFormProps {
