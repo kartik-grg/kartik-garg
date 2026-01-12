@@ -1,5 +1,5 @@
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000/api/v1';
-const EXPERIENCES_API = `${API_BASE_URL}/experiences`;
+const EXPERIENCES_API = `${API_BASE_URL}/api/v1/experiences`;
 
 export interface Experience {
     _id: string;

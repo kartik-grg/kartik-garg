@@ -2,7 +2,7 @@
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000/api/v1';
 
 // Projects API endpoints
-const PROJECTS_API = `${API_BASE_URL}/projects`;
+const PROJECTS_API = `${API_BASE_URL}/api/v1/projects`;
 
 // API Response type
 export interface ApiResponse<T> {
