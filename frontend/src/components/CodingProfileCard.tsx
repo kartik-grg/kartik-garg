@@ -22,7 +22,6 @@ const CodingProfileCard: React.FC<CodingProfileCardProps> = ({
   rating,
   problemsSolved,
   profileUrl,
-  stats,
 }) => {
   return (
     <div className="p-6 bg-[var(--nav-hover-bg)] rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border border-[var(--nav-border-color)] hover:border-[var(--nav-text-hover)] group">

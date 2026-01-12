@@ -8,7 +8,6 @@ interface EditCertificationFormProps {
 }
 
 const EditCertificationForm: React.FC<EditCertificationFormProps> = ({ certificationId, onSuccess }) => {
-    const [certification, setCertification] = useState<Certification | null>(null);
     const [formData, setFormData] = useState<Omit<UpdateCertificationData, 'imageFile'> & { imageFile: File | null }>({
         name: '',
         issued_by: '',
@@ -29,7 +28,6 @@ const EditCertificationForm: React.FC<EditCertificationFormProps> = ({ certifica
             try {
                 setFetchLoading(true);
                 const data = await getCertificationById(certificationId);
-                setCertification(data);
                 setFormData({
                     name: data.name,
                     issued_by: data.issued_by,

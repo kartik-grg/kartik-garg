@@ -1,6 +1,6 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
-import profilePhoto from "../assets/profile.jpg";
+// import profilePhoto from "../assets/profile.jpg";
 import { usePersonalInfo } from '../hooks/usePersonalInfo';
 import { useCodingProfiles } from '../hooks/useCodingProfiles';
 
@@ -79,7 +79,7 @@ function Home() {
 
             {/* Description */}
             <p className="text-base sm:text-lg text-[var(--nav-text-color)] opacity-70 max-w-xl mx-auto lg:mx-0 leading-relaxed">
-              {personalInfo?.description || "Passionate about building scalable web applications and solving complex problems. I specialize in modern web technologies and create seamless user experiences with clean, efficient code."}
+              {personalInfo?.description?.split('\n').slice(0, 2).join('\n') || "Passionate about building scalable web applications and solving complex problems."}
             </p>
 
             {/* Buttons */}
@@ -105,7 +105,7 @@ function Home() {
             <div className="relative">
               <div className="w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-[var(--nav-text-hover)] shadow-2xl">
                 <img
-                  src={personalInfo?.profile_image || profilePhoto}
+                  src={personalInfo?.profile_image}
                   alt={personalInfo?.name || "Profile"}
                   className="w-full h-full object-cover"
                 />

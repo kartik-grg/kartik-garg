@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { FaGithub, FaExternalLinkAlt, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import { useProjects } from '../hooks/useProjects';
 import { usePersonalInfo } from '../hooks/usePersonalInfo';

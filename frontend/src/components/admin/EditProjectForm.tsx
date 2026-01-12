@@ -8,7 +8,6 @@ interface EditProjectFormProps {
 }
 
 const EditProjectForm: React.FC<EditProjectFormProps> = ({ projectId, onSuccess }) => {
-    const [project, setProject] = useState<Project | null>(null);
     const [formData, setFormData] = useState<Omit<UpdateProjectData, 'imageFile'> & { imageFile: File | null }>({
         title: '',
         description: '',
@@ -29,7 +28,6 @@ const EditProjectForm: React.FC<EditProjectFormProps> = ({ projectId, onSuccess 
             try {
                 setFetchLoading(true);
                 const data = await getProjectById(projectId);
-                setProject(data);
                 setFormData({
                     title: data.title,
                     description: data.description,

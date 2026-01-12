@@ -1,4 +1,3 @@
-import React from 'react';
 import { FaBriefcase } from 'react-icons/fa';
 import { useExperiences } from '../hooks/useExperiences';
 
@@ -59,7 +58,7 @@ const Experience = () => {
           {/* Vertical Timeline Line */}
           <div className="hidden lg:block absolute left-5 top-0 bottom-0 w-0.5 bg-[var(--nav-border-color)]"></div>
 
-          {experiences.map((experience, index) => (
+          {experiences.map((experience) => (
             <div
               key={experience._id}
               className="relative pl-0 lg:pl-16"

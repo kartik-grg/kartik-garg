@@ -27,7 +27,32 @@ const AboutMe = () => {
                   <div className="animate-spin rounded-full h-8 w-8 border-t-4 border-b-4 border-[var(--nav-text-hover)] mx-auto"></div>
                 </div>
               ) : personalInfo?.description ? (
-                <p>{personalInfo.description}</p>
+                <>
+                  <p>
+                    {(() => {
+                      const sentences = personalInfo.description.split('. ');
+                      const firstTwo = sentences.slice(0, 2).join('. ');
+                      return firstTwo + (firstTwo.endsWith('.') ? '' : '.');
+                    })()}
+                  </p>
+                  {(() => {
+                    const sentences = personalInfo.description.split('. ');
+                    if (sentences.length > 2) {
+                      const remaining = sentences.slice(2);
+                      const midPoint = Math.ceil(remaining.length / 2);
+                      const secondPara = remaining.slice(0, midPoint).join('. ').trim();
+                      const thirdPara = remaining.slice(midPoint).join('. ').trim();
+                      
+                      return (
+                        <>
+                          {secondPara && <p>{secondPara + (secondPara.endsWith('.') ? '' : '.')}</p>}
+                          {thirdPara && <p>{thirdPara}</p>}
+                        </>
+                      );
+                    }
+                    return null;
+                  })()}
+                </>
               ) : (
                 <>
                   <p>
