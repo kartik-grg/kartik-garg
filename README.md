@@ -285,7 +285,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **Kartik Garg**
 
 - GitHub: [@kartik-garg](https://github.com/yourusername)
-- Email: your.email@gmail.com
+- Email: kartik122004@gmail.com
 
 ## 🙏 Acknowledgments
 
