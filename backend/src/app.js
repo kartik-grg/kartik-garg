@@ -16,6 +16,9 @@ import personalInfoRouter from './routes/personalInfo.routes.js';
 
 const app = express();
 
+// Trust proxy - IMPORTANT for Render
+app.set('trust proxy', 1);
+
 app.use(
     cors({
         origin: process.env.CORS_ORIGIN,
